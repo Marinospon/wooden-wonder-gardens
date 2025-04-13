@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -40,9 +39,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-serif font-bold text-wood-dark">
-            ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ
-          </span>
+          <img src="/lovable-uploads/3ec28629-0c84-4601-80c5-8fa8270069e5.png" alt="Ξύλινες Δημιουργίες" className="h-16" />
         </Link>
 
         {/* Desktop Navigation */}

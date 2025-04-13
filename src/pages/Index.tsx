@@ -5,28 +5,28 @@ import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ProjectCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Leaf, Hammer, Users } from 'lucide-react';
+import { ArrowRight, Award, Leaf, Hammer, Users, Home } from 'lucide-react';
 
 const Index = () => {
-  // Sample featured projects
+  // Sample featured projects using the uploaded images
   const featuredProjects = [
     {
-      id: 'elegant-garden-pergola',
+      id: 'wooden-pergola',
       title: 'Πέργκολα Κήπου',
       category: 'Πέργκολες',
-      imageUrl: 'https://images.unsplash.com/photo-1598902590388-afda95c3f850?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+      imageUrl: '/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png'
     },
     {
-      id: 'cedar-deck-with-railing',
-      title: 'Ξύλινο Δάπεδο με Κάγκελα',
+      id: 'wooden-deck',
+      title: 'Ξύλινο Δάπεδο',
       category: 'Δάπεδα',
-      imageUrl: 'https://images.unsplash.com/photo-1575403071235-5a8b59af4477?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+      imageUrl: '/lovable-uploads/85c0b3c5-da97-4b4d-93f9-22dc5e26c23f.png'
     },
     {
-      id: 'japanese-garden-bridge',
-      title: 'Γεφυράκι Κήπου',
-      category: 'Διακοσμητικά Κήπου',
-      imageUrl: 'https://images.unsplash.com/photo-1611029430255-e70dfbe20738?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+      id: 'wooden-divider',
+      title: 'Ξύλινα Διαχωριστικά',
+      category: 'Διαχωριστικά',
+      imageUrl: '/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png'
     }
   ];
 
@@ -36,7 +36,7 @@ const Index = () => {
       <HeroBanner
         title="Ξύλινες Δημιουργίες για τον Κήπο και τη Βεράντα σας"
         subtitle="Όμορφες, εξατομικευμένες ξύλινες κατασκευές και στοιχεία κήπου χειροποίητα με πάθος και ακρίβεια."
-        imageUrl="/garden-hero.jpg"
+        imageUrl="/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png"
         ctaText="Δείτε τις Δημιουργίες μας"
       />
       
@@ -50,7 +50,7 @@ const Index = () => {
                 Σας περιμένουμε στο χώρο της έκθεσης μας όταν θελήσετε να δημιουργήσετε στο κήπο ή στη βεράντα σας, μία σας έμπνευση... 
               </p>
               <p className="text-lg mb-8">
-                Πέργκολες και κιόσκια που προσφέρουν σκίαση αλλά και φως, σημείο επικοινωνίας και χαλάρωσης. Περιφράξεις και διαχωριστικά, πάρκινγκ και ξύλινα πατώματα απόλυτα προσαρμοσμένα στο χώρο και την αισθητική σας.
+                Πέργκολες και κιόσκια που προσφέρουν σκίαση αλλά και φως, σημείο επικοινωνίας και χαλάρωσης. Περιφράξεις και διαχωριστικά, πάρκινγκ και ξύλινα πατώματα απόλυτα προσαρμοσμένα στο χώρο και την αισθητική σας. Ξύλινες ζαρντινιέρες σε όποιες διαστάσεις θέλετε. Παιδικά σπιτάκια και δεντρόσπιτα για να στεγάσουν τα παιδιά σας... τα πρώτα τους όνειρα! Αποθηκάκια κήπου, σπιτάκια σκύλου, έπιπλα - καθιστικά, γεφυράκια και κάθε λογής διακοσμητικό στοιχείο πάντα φτιαγμένο από ξύλο και πάντα φτιαγμένο για εσάς και μόνο.
               </p>
               <Button asChild className="bg-wood hover:bg-wood-dark text-white">
                 <Link to="/about">Μάθετε Περισσότερα <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -60,7 +60,7 @@ const Index = () => {
             <div className="order-1 lg:order-2 relative">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="/wood-texture.jpg" 
+                  src="/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png" 
                   alt="Ξύλινη κατασκευή κήπου" 
                   className="w-full h-full object-cover"
                 />
@@ -99,6 +99,21 @@ const Index = () => {
               icon={<Award className="h-10 w-10 text-garden" />}
               title="Ειδικές Κατασκευές" 
               description="Μοναδικά ξύλινα στοιχεία συμπεριλαμβανομένων γεφυρών, ζαρντινιέρων και διακοσμητικών στοιχείων."
+            />
+            <ServiceCard 
+              icon={<Home className="h-10 w-10 text-garden" />}
+              title="Παιδικά Σπιτάκια" 
+              description="Ξύλινα σπιτάκια και δεντρόσπιτα για να στεγάσουν τα πρώτα όνειρα των παιδιών σας."
+            />
+            <ServiceCard 
+              icon={<Users className="h-10 w-10 text-garden" />}
+              title="Έπιπλα Κήπου" 
+              description="Καθιστικά, τραπέζια, παγκάκια και άλλα έπιπλα κήπου προσαρμοσμένα στις ανάγκες σας."
+            />
+            <ServiceCard 
+              icon={<Hammer className="h-10 w-10 text-garden" />}
+              title="Ξύλινα Δάπεδα" 
+              description="Δάπεδα εξωτερικού χώρου υψηλής ποιότητας και αντοχής για κήπους, βεράντες και πισίνες."
             />
           </div>
         </div>

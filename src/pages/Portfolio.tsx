@@ -1,65 +1,46 @@
-
 import React, { useState } from 'react';
 import HeroBanner from '@/components/HeroBanner';
 import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ProjectCard';
 import { Button } from '@/components/ui/button';
 
-// Mock data for portfolio projects
+// Updated projects with the real images from the business
 const projects = [
   {
-    id: 'elegant-garden-pergola',
+    id: 'wooden-pergola',
     title: 'Πέργκολα Κήπου',
     category: 'Πέργκολες',
-    imageUrl: 'https://images.unsplash.com/photo-1598902590388-afda95c3f850?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+    imageUrl: '/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png'
   },
   {
-    id: 'cedar-deck-with-railing',
-    title: 'Ξύλινο Δάπεδο με Κάγκελα',
+    id: 'wooden-deck',
+    title: 'Ξύλινο Δάπεδο',
     category: 'Δάπεδα',
-    imageUrl: 'https://images.unsplash.com/photo-1575403071235-5a8b59af4477?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+    imageUrl: '/lovable-uploads/85c0b3c5-da97-4b4d-93f9-22dc5e26c23f.png'
   },
   {
-    id: 'japanese-garden-bridge',
-    title: 'Γεφυράκι Κήπου',
-    category: 'Διακοσμητικά Κήπου',
-    imageUrl: 'https://images.unsplash.com/photo-1611029430255-e70dfbe20738?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
-  },
-  {
-    id: 'backyard-gazebo',
-    title: 'Κιόσκι Κήπου',
-    category: 'Κιόσκια',
-    imageUrl: 'https://images.unsplash.com/photo-1568750478564-e646311d8079?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
-  },
-  {
-    id: 'redwood-garden-bench',
-    title: 'Ξύλινο Παγκάκι Κήπου',
-    category: 'Έπιπλα Κήπου',
-    imageUrl: 'https://images.unsplash.com/photo-1592250819999-c6aa104adb4a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
-  },
-  {
-    id: 'rustic-arbor',
-    title: 'Ρουστίκ Πέργκολα',
-    category: 'Πέργκολες',
-    imageUrl: 'https://images.unsplash.com/photo-1558718970-17a39cfc9a48?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
-  },
-  {
-    id: 'modern-planter-boxes',
-    title: 'Μοντέρνες Ξύλινες Ζαρντινιέρες',
-    category: 'Ζαρντινιέρες',
-    imageUrl: 'https://images.unsplash.com/photo-1581173731795-ee0e783f5744?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
-  },
-  {
-    id: 'privacy-screen',
-    title: 'Διαχωριστικό Κήπου',
+    id: 'wooden-divider',
+    title: 'Ξύλινα Διαχωριστικά',
     category: 'Διαχωριστικά',
-    imageUrl: 'https://images.unsplash.com/photo-1494511516029-9eea1ecf6c88?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+    imageUrl: '/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png'
   },
   {
-    id: 'elevated-garden-beds',
-    title: 'Υπερυψωμένα Παρτέρια',
-    category: 'Παρτέρια',
-    imageUrl: 'https://images.unsplash.com/photo-1595810489839-dcf8cbbd717e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
+    id: 'terrace-pergola',
+    title: 'Πέργκολα Βεράντας',
+    category: 'Πέργκολες',
+    imageUrl: '/lovable-uploads/7141aad8-fdef-4110-954c-67a72923c424.png'
+  },
+  {
+    id: 'garden-house',
+    title: 'Ξύλινο Σπιτάκι Κήπου',
+    category: 'Κατασκευές Κήπου',
+    imageUrl: '/lovable-uploads/dcc4bd63-f238-47a9-af55-9b7af3032a3f.png'
+  },
+  {
+    id: 'garden-sheds',
+    title: 'Αποθηκάκια Κήπου',
+    category: 'Κατασκευές Κήπου',
+    imageUrl: '/lovable-uploads/dcc4bd63-f238-47a9-af55-9b7af3032a3f.png'
   }
 ];
 
