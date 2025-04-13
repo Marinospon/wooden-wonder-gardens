@@ -44,16 +44,32 @@
       <h1>Testing Connection...</h1>
       <p>If you see this message, the HTML is loading but the React application might not be rendering.</p>
       <p>Check your browser console for errors.</p>
+      <p><strong>Common issues:</strong></p>
+      <ul>
+        <li>JavaScript is disabled or blocked</li>
+        <li>Missing or incorrect asset paths</li>
+        <li>Build files not correctly deployed</li>
+        <li>Server not configured to handle React routes</li>
+      </ul>
     </div>
     
     <div id="root"></div>
     
     <script>
+      // Log browser information to help with debugging
+      console.log('Browser information:', navigator.userAgent);
+      
       // This will hide the loading indicator when React mounts
       window.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded and parsed');
         setTimeout(function() {
+          console.log('Checking if React has mounted...');
+          console.log('Root children:', document.getElementById('root').children.length);
           if (document.getElementById('root').children.length > 0) {
+            console.log('React app mounted, hiding loading indicator');
             document.getElementById('loading-indicator').style.display = 'none';
+          } else {
+            console.log('React app not mounted after 1 second');
           }
         }, 1000);
       });
