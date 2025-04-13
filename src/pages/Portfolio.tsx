@@ -1,67 +1,102 @@
+
 import React, { useState } from 'react';
 import HeroBanner from '@/components/HeroBanner';
 import SectionTitle from '@/components/SectionTitle';
-import ProjectCard from '@/components/ProjectCard';
+import CategoryCard from '@/components/CategoryCard';
 import { Button } from '@/components/ui/button';
 
-// Updated projects with the real images from the business
-const projects = [
+// Updated categories with the real images from the business
+const categories = [
   {
-    id: 'wooden-pergola',
-    title: 'Πέργκολα Κήπου',
-    category: 'Πέργκολες',
+    id: 'parking',
+    title: 'PARKING',
+    count: 10,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'zardinieres',
+    title: 'ΖΑΡΝΤΙΝΙΕΡΕΣ',
+    count: 27,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'flower-pots',
+    title: 'ΚΑΦΑΣΩΤΑ',
+    count: 26,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'wooden-decks',
+    title: 'ΞΥΛΙΝΑ ΠΑΤΩΜΑΤΑ',
+    count: 15,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'fences',
+    title: 'ΠΕΡΙΦΡΑΞΕΙΣ',
+    count: 21,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'dog-houses',
+    title: 'ΣΠΙΤΑΚΙΑ ΣΚΥΛΩΝ',
+    count: 27,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'garden-houses',
+    title: 'ΣΠΙΤΑΚΙΑ ΚΗΠΟΥ',
+    count: 14,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'children-houses',
+    title: 'ΠΑΙΔΙΚΑ ΣΠΙΤΑΚΙΑ',
+    count: 21,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'seating',
+    title: 'ΚΑΘΙΣΤΙΚΑ',
+    count: 16,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'kiosks',
+    title: 'ΚΙΟΣΚΙΑ',
+    count: 5,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'doors',
+    title: 'ΠΟΡΤΕΣ',
+    count: 13,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'roofing',
+    title: 'ΣΚΕΠΑΣΗ',
+    count: 21,
+    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+  },
+  {
+    id: 'pergolas',
+    title: 'ΠΕΡΓΚΟΛΕΣ',
+    count: 30,
     imageUrl: '/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png'
   },
-  {
-    id: 'wooden-deck',
-    title: 'Ξύλινο Δάπεδο',
-    category: 'Δάπεδα',
-    imageUrl: '/lovable-uploads/85c0b3c5-da97-4b4d-93f9-22dc5e26c23f.png'
-  },
-  {
-    id: 'wooden-divider',
-    title: 'Ξύλινα Διαχωριστικά',
-    category: 'Διαχωριστικά',
-    imageUrl: '/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png'
-  },
-  {
-    id: 'terrace-pergola',
-    title: 'Πέργκολα Βεράντας',
-    category: 'Πέργκολες',
-    imageUrl: '/lovable-uploads/7141aad8-fdef-4110-954c-67a72923c424.png'
-  },
-  {
-    id: 'garden-house',
-    title: 'Ξύλινο Σπιτάκι Κήπου',
-    category: 'Κατασκευές Κήπου',
-    imageUrl: '/lovable-uploads/dcc4bd63-f238-47a9-af55-9b7af3032a3f.png'
-  },
-  {
-    id: 'garden-sheds',
-    title: 'Αποθηκάκια Κήπου',
-    category: 'Κατασκευές Κήπου',
-    imageUrl: '/lovable-uploads/dcc4bd63-f238-47a9-af55-9b7af3032a3f.png'
-  }
 ];
 
-// All available categories
-const allCategories = ['Όλα', ...new Set(projects.map(project => project.category))];
-
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Όλα');
+  const [selectedCategory, setSelectedCategory] = useState('');
   
-  // Filter projects based on selected category
-  const filteredProjects = selectedCategory === 'Όλα' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
       <HeroBanner
-        title="Το Χαρτοφυλάκιό μας"
+        title="Κατηγορίες Έργων"
         subtitle="Εξερευνήστε τη συλλογή μας από χειροποίητες ξύλινες κατασκευές και στοιχεία κήπου."
-        imageUrl="/garden-hero.jpg"
+        imageUrl="/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png"
         overlay={true}
       />
       
@@ -69,43 +104,22 @@ const Portfolio = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="Τα Έργα μας" 
-            subtitle="Περιηγηθείτε στα ολοκληρωμένα έργα μας και ανακαλύψτε την τεχνογνωσία που συνοδεύει κάθε ξύλινη κατασκευή που δημιουργούμε."
+            title="Έργα ανά Κατηγορία" 
+            subtitle="Περιηγηθείτε στις κατηγορίες των έργων μας και ανακαλύψτε την τεχνογνωσία που συνοδεύει κάθε ξύλινη κατασκευή που δημιουργούμε."
           />
           
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {allCategories.map(category => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                className={selectedCategory === category ? "bg-wood hover:bg-wood-dark" : ""}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-          
-          {/* Projects Grid */}
+          {/* Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map(project => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                category={project.category}
-                imageUrl={project.imageUrl}
+            {categories.map(category => (
+              <CategoryCard
+                key={category.id}
+                id={category.id}
+                title={category.title}
+                count={category.count}
+                imageUrl={category.imageUrl}
               />
             ))}
           </div>
-          
-          {/* Empty State */}
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-xl text-muted-foreground">Δεν βρέθηκαν έργα σε αυτή την κατηγορία.</p>
-            </div>
-          )}
         </div>
       </section>
       
