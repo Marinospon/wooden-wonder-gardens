@@ -91,10 +91,7 @@ const Footer = () => {
         <hr className="border-earth-light/20 my-8" />
 
         <div className="text-center text-earth-light text-sm">
-          <p>&copy; {new Date().getFullYear()} ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ. Με επιφύλαξη παντός δικαιώματος.</p>
-          <p className="mt-2">
-            Created by <a href="https://pcdoctoras.gr" target="_blank" rel="noopener noreferrer" className="text-wood-light hover:text-white transition-colors">pcdoctoras.gr</a>
-          </p>
+          <p>&copy; 2025 Created by <a href="https://pcdoctoras.gr" target="_blank" rel="noopener noreferrer" className="text-wood-light hover:text-white transition-colors">pcdoctoras.gr</a>. Με επιφύλαξη παντός δικαιώματος.</p>
         </div>
       </div>
     </footer>
