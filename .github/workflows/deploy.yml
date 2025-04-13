@@ -1,6 +1,9 @@
 
 name: Deploy to GitHub Pages
 
+# This workflow builds your React app and deploys the BUILT files to GitHub Pages
+# Note: This does NOT push your source code to GitHub - only the compiled output
+
 on:
   push:
     branches: [ main ]
