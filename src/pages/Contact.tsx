@@ -15,8 +15,8 @@ const Contact = () => {
     e.preventDefault();
     // In a real application, you would send the form data to a server
     toast({
-      title: "Message Sent",
-      description: "Thank you! We'll get back to you soon.",
+      title: "Μήνυμα Εστάλη",
+      description: "Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.",
       duration: 5000,
     });
   };
@@ -25,9 +25,9 @@ const Contact = () => {
     <div className="min-h-screen">
       {/* Hero Banner */}
       <HeroBanner
-        title="Contact Us"
-        subtitle="Get in touch with our team to discuss your garden project."
-        imageUrl="https://images.unsplash.com/photo-1621640119807-ca4efb503014?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1800&h=900"
+        title="Επικοινωνία"
+        subtitle="Επικοινωνήστε μαζί μας για να συζητήσουμε το έργο κήπου σας."
+        imageUrl="/garden-hero.jpg"
       />
       
       {/* Contact Section */}
@@ -37,8 +37,8 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <SectionTitle 
-                title="Get In Touch" 
-                subtitle="Fill out the form below and we'll get back to you as soon as possible."
+                title="Επικοινωνήστε Μαζί Μας" 
+                subtitle="Συμπληρώστε τη φόρμα παρακάτω και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό."
                 align="left"
               />
               
@@ -46,21 +46,21 @@ const Contact = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                      First Name *
+                      Όνομα *
                     </label>
                     <Input 
                       id="firstName" 
-                      placeholder="Your first name" 
+                      placeholder="Το όνομά σας" 
                       required 
                     />
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                      Last Name *
+                      Επώνυμο *
                     </label>
                     <Input 
                       id="lastName" 
-                      placeholder="Your last name" 
+                      placeholder="Το επώνυμό σας" 
                       required 
                     />
                   </div>
@@ -68,51 +68,51 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address *
+                    Email *
                   </label>
                   <Input 
                     id="email" 
                     type="email" 
-                    placeholder="Your email address" 
+                    placeholder="Η διεύθυνση email σας" 
                     required 
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                    Phone Number
+                    Τηλέφωνο
                   </label>
                   <Input 
                     id="phone" 
-                    placeholder="Your phone number" 
+                    placeholder="Το τηλέφωνό σας" 
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject *
+                    Θέμα *
                   </label>
                   <Input 
                     id="subject" 
-                    placeholder="What is your message about?" 
+                    placeholder="Σχετικά με τι είναι το μήνυμά σας;" 
                     required 
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message *
+                    Μήνυμα *
                   </label>
                   <Textarea 
                     id="message" 
-                    placeholder="Tell us about your project or inquiry" 
+                    placeholder="Περιγράψτε το έργο ή την ερώτησή σας" 
                     rows={5} 
                     required 
                   />
                 </div>
                 
                 <Button type="submit" className="w-full bg-wood hover:bg-wood-dark text-white">
-                  Send Message
+                  Αποστολή Μηνύματος
                 </Button>
               </form>
             </div>
@@ -120,47 +120,46 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <SectionTitle 
-                title="Contact Information" 
-                subtitle="Visit us, call us, or send us an email. We're here to help with your wooden garden structure needs."
+                title="Πληροφορίες Επικοινωνίας" 
+                subtitle="Επισκεφθείτε μας, καλέστε μας ή στείλτε μας email. Είμαστε εδώ για να σας βοηθήσουμε με τις ξύλινες κατασκευές κήπου σας."
                 align="left"
               />
               
               <div className="space-y-8 mt-10">
                 <ContactInfo 
                   icon={<MapPin size={24} className="text-wood" />}
-                  title="Our Location"
+                  title="Η Διεύθυνσή μας"
                   details={[
-                    "123 Garden Lane",
-                    "Woodville, WV 54321",
-                    "United States"
+                    "ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ",
+                    "ΛΕΩΦ. ΦΛΕΜΙΝΓΚ 54",
+                    "ΡΑΦΗΝΑ"
                   ]}
                 />
                 
                 <ContactInfo 
                   icon={<Phone size={24} className="text-wood" />}
-                  title="Phone Number"
+                  title="Τηλέφωνο"
                   details={[
-                    "(555) 123-4567",
-                    "(555) 987-6543"
+                    "Τηλ: 22940 78371",
+                    "Κιν: 697-774-2882"
                   ]}
                 />
                 
                 <ContactInfo 
                   icon={<Mail size={24} className="text-wood" />}
-                  title="Email Address"
+                  title="Email"
                   details={[
-                    "info@woodenwondergardens.com",
-                    "sales@woodenwondergardens.com"
+                    "info@wooden-creations.gr"
                   ]}
                 />
                 
                 <ContactInfo 
                   icon={<Clock size={24} className="text-wood" />}
-                  title="Business Hours"
+                  title="Ώρες Λειτουργίας"
                   details={[
-                    "Monday - Friday: 8am - 6pm",
-                    "Saturday: 9am - 4pm",
-                    "Sunday: Closed"
+                    "Δευτέρα - Παρασκευή: 9πμ - 7μμ",
+                    "Σάββατο: 9πμ - 3μμ",
+                    "Κυριακή: Κλειστά"
                   ]}
                 />
               </div>
@@ -169,7 +168,7 @@ const Contact = () => {
               <div className="mt-12">
                 <div className="w-full h-80 bg-muted rounded-lg overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1000&h=400"
+                    src="/wood-texture.jpg"
                     alt="Map location" 
                     className="w-full h-full object-cover"
                   />
@@ -184,26 +183,26 @@ const Contact = () => {
       <section className="py-24 bg-earth-light/20">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="Frequently Asked Questions" 
-            subtitle="Find answers to some of the most common questions about our wooden garden structures."
+            title="Συχνές Ερωτήσεις" 
+            subtitle="Βρείτε απαντήσεις σε μερικές από τις πιο συχνές ερωτήσεις σχετικά με τις ξύλινες κατασκευές κήπου μας."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
             <FaqItem 
-              question="How long does a typical project take?"
-              answer="Project timelines vary depending on complexity and size. A standard pergola typically takes 3-4 weeks from design approval to installation. Larger or more custom projects may take 6-8 weeks."
+              question="Πόσο χρόνο χρειάζεται συνήθως ένα έργο;"
+              answer="Ο χρόνος ολοκλήρωσης του έργου εξαρτάται από την πολυπλοκότητα και το μέγεθος. Μία τυπική πέργκολα χρειάζεται συνήθως 3-4 εβδομάδες από την έγκριση του σχεδίου μέχρι την εγκατάσταση. Τα μεγαλύτερα ή πιο εξειδικευμένα έργα μπορεί να χρειαστούν 6-8 εβδομάδες."
             />
             <FaqItem 
-              question="What types of wood do you use?"
-              answer="We primarily work with cedar, redwood, and pressure-treated pine. All our wood is responsibly sourced and chosen for its durability, appearance, and suitability for outdoor garden structures."
+              question="Τι είδη ξύλου χρησιμοποιείτε;"
+              answer="Χρησιμοποιούμε κυρίως κέδρο, ερυθρελάτη και εμποτισμένο πεύκο. Όλα τα ξύλα μας προέρχονται από υπεύθυνες πηγές και επιλέγονται για την ανθεκτικότητα, την εμφάνιση και την καταλληλότητά τους για εξωτερικές κατασκευές κήπου."
             />
             <FaqItem 
-              question="Do you offer design services?"
-              answer="Yes, our team includes experienced designers who will work with you to create custom wooden structures that complement your garden and meet your specific needs."
+              question="Προσφέρετε υπηρεσίες σχεδιασμού;"
+              answer="Ναι, η ομάδα μας περιλαμβάνει έμπειρους σχεδιαστές που θα συνεργαστούν μαζί σας για να δημιουργήσουν εξατομικευμένες ξύλινες κατασκευές που συμπληρώνουν τον κήπο σας και καλύπτουν τις συγκεκριμένες ανάγκες σας."
             />
             <FaqItem 
-              question="What is the warranty on your structures?"
-              answer="We offer a 5-year warranty on workmanship and structural integrity for all our garden structures. Specific wood materials may have additional manufacturer warranties."
+              question="Ποια είναι η εγγύηση για τις κατασκευές σας;"
+              answer="Προσφέρουμε 5ετή εγγύηση για την εργασία και τη δομική ακεραιότητα για όλες τις κατασκευές του κήπου μας. Συγκεκριμένα υλικά ξύλου μπορεί να έχουν πρόσθετες εγγυήσεις κατασκευαστή."
             />
           </div>
         </div>

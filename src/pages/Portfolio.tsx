@@ -9,68 +9,68 @@ import { Button } from '@/components/ui/button';
 const projects = [
   {
     id: 'elegant-garden-pergola',
-    title: 'Elegant Garden Pergola',
-    category: 'Pergolas',
+    title: 'Πέργκολα Κήπου',
+    category: 'Πέργκολες',
     imageUrl: 'https://images.unsplash.com/photo-1598902590388-afda95c3f850?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'cedar-deck-with-railing',
-    title: 'Cedar Deck with Custom Railing',
-    category: 'Decking',
+    title: 'Ξύλινο Δάπεδο με Κάγκελα',
+    category: 'Δάπεδα',
     imageUrl: 'https://images.unsplash.com/photo-1575403071235-5a8b59af4477?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'japanese-garden-bridge',
-    title: 'Japanese Garden Bridge',
-    category: 'Garden Features',
+    title: 'Γεφυράκι Κήπου',
+    category: 'Διακοσμητικά Κήπου',
     imageUrl: 'https://images.unsplash.com/photo-1611029430255-e70dfbe20738?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'backyard-gazebo',
-    title: 'Backyard Gazebo Retreat',
-    category: 'Gazebos',
+    title: 'Κιόσκι Κήπου',
+    category: 'Κιόσκια',
     imageUrl: 'https://images.unsplash.com/photo-1568750478564-e646311d8079?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'redwood-garden-bench',
-    title: 'Redwood Garden Bench',
-    category: 'Garden Furniture',
+    title: 'Ξύλινο Παγκάκι Κήπου',
+    category: 'Έπιπλα Κήπου',
     imageUrl: 'https://images.unsplash.com/photo-1592250819999-c6aa104adb4a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'rustic-arbor',
-    title: 'Rustic Garden Arbor',
-    category: 'Arbors',
+    title: 'Ρουστίκ Πέργκολα',
+    category: 'Πέργκολες',
     imageUrl: 'https://images.unsplash.com/photo-1558718970-17a39cfc9a48?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'modern-planter-boxes',
-    title: 'Modern Wooden Planter Boxes',
-    category: 'Planters',
+    title: 'Μοντέρνες Ξύλινες Ζαρντινιέρες',
+    category: 'Ζαρντινιέρες',
     imageUrl: 'https://images.unsplash.com/photo-1581173731795-ee0e783f5744?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'privacy-screen',
-    title: 'Garden Privacy Screen',
-    category: 'Screens',
+    title: 'Διαχωριστικό Κήπου',
+    category: 'Διαχωριστικά',
     imageUrl: 'https://images.unsplash.com/photo-1494511516029-9eea1ecf6c88?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   },
   {
     id: 'elevated-garden-beds',
-    title: 'Elevated Garden Beds',
-    category: 'Garden Beds',
+    title: 'Υπερυψωμένα Παρτέρια',
+    category: 'Παρτέρια',
     imageUrl: 'https://images.unsplash.com/photo-1595810489839-dcf8cbbd717e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=987&h=740'
   }
 ];
 
 // All available categories
-const allCategories = ['All', ...new Set(projects.map(project => project.category))];
+const allCategories = ['Όλα', ...new Set(projects.map(project => project.category))];
 
 const Portfolio = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('Όλα');
   
   // Filter projects based on selected category
-  const filteredProjects = selectedCategory === 'All' 
+  const filteredProjects = selectedCategory === 'Όλα' 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
@@ -78,9 +78,9 @@ const Portfolio = () => {
     <div className="min-h-screen">
       {/* Hero Banner */}
       <HeroBanner
-        title="Our Portfolio"
-        subtitle="Explore our collection of handcrafted wooden garden structures and features."
-        imageUrl="https://images.unsplash.com/photo-1523575318206-33e1cca70fe4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1800&h=900"
+        title="Το Χαρτοφυλάκιό μας"
+        subtitle="Εξερευνήστε τη συλλογή μας από χειροποίητες ξύλινες κατασκευές και στοιχεία κήπου."
+        imageUrl="/garden-hero.jpg"
         overlay={true}
       />
       
@@ -88,8 +88,8 @@ const Portfolio = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="Our Work" 
-            subtitle="Browse through our completed projects and discover the craftsmanship that goes into each wooden structure we create."
+            title="Τα Έργα μας" 
+            subtitle="Περιηγηθείτε στα ολοκληρωμένα έργα μας και ανακαλύψτε την τεχνογνωσία που συνοδεύει κάθε ξύλινη κατασκευή που δημιουργούμε."
           />
           
           {/* Category Filter */}
@@ -122,7 +122,7 @@ const Portfolio = () => {
           {/* Empty State */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-xl text-muted-foreground">No projects found in this category.</p>
+              <p className="text-xl text-muted-foreground">Δεν βρέθηκαν έργα σε αυτή την κατηγορία.</p>
             </div>
           )}
         </div>
@@ -132,30 +132,30 @@ const Portfolio = () => {
       <section className="py-24 bg-earth-light/20">
         <div className="container mx-auto px-4">
           <SectionTitle 
-            title="Our Project Process" 
-            subtitle="From initial consultation to final installation, our process ensures a seamless experience and exceptional results."
+            title="Η Διαδικασία Έργου μας" 
+            subtitle="Από την αρχική συμβουλευτική έως την τελική εγκατάσταση, η διαδικασία μας εξασφαλίζει μια ομαλή εμπειρία και εξαιρετικά αποτελέσματα."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ProcessCard 
               step="01"
-              title="Consultation"
-              description="We meet to discuss your vision, preferences, and requirements for your garden structure."
+              title="Συμβουλευτική"
+              description="Συναντιόμαστε για να συζητήσουμε το όραμά σας, τις προτιμήσεις και τις απαιτήσεις σας για την κατασκευή του κήπου σας."
             />
             <ProcessCard 
               step="02"
-              title="Design"
-              description="Our designers create detailed plans and renderings for your approval."
+              title="Σχεδιασμός"
+              description="Οι σχεδιαστές μας δημιουργούν λεπτομερή σχέδια και απεικονίσεις για την έγκρισή σας."
             />
             <ProcessCard 
               step="03"
-              title="Crafting"
-              description="Our skilled craftsmen build your structure using premium materials and traditional techniques."
+              title="Κατασκευή"
+              description="Οι έμπειροι τεχνίτες μας κατασκευάζουν τη δομή σας χρησιμοποιώντας κορυφαία υλικά και παραδοσιακές τεχνικές."
             />
             <ProcessCard 
               step="04"
-              title="Installation"
-              description="We carefully install your finished piece in your garden with minimal disruption."
+              title="Εγκατάσταση"
+              description="Εγκαθιστούμε προσεκτικά το τελικό σας κομμάτι στον κήπο σας με ελάχιστη διαταραχή."
             />
           </div>
         </div>

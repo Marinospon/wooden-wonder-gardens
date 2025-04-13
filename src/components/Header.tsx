@@ -41,16 +41,16 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <span className="text-2xl font-serif font-bold text-wood-dark">
-            Wooden Wonder Gardens
+            ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <NavLink to="/" active={isActive('/')}>Home</NavLink>
-          <NavLink to="/portfolio" active={isActive('/portfolio')}>Our Work</NavLink>
-          <NavLink to="/about" active={isActive('/about')}>About Us</NavLink>
-          <NavLink to="/contact" active={isActive('/contact')}>Contact</NavLink>
+          <NavLink to="/" active={isActive('/')}>Αρχική</NavLink>
+          <NavLink to="/portfolio" active={isActive('/portfolio')}>Έργα μας</NavLink>
+          <NavLink to="/about" active={isActive('/about')}>Σχετικά με εμάς</NavLink>
+          <NavLink to="/contact" active={isActive('/contact')}>Επικοινωνία</NavLink>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -68,19 +68,19 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm shadow-md animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <MobileNavLink to="/" active={isActive('/')} onClick={() => setMobileMenuOpen(false)}>
-              Home
+              Αρχική
             </MobileNavLink>
             <MobileNavLink to="/portfolio" active={isActive('/portfolio')} onClick={() => setMobileMenuOpen(false)}>
-              Our Work
+              Έργα μας
             </MobileNavLink>
             <MobileNavLink to="/about" active={isActive('/about')} onClick={() => setMobileMenuOpen(false)}>
-              About Us
+              Σχετικά με εμάς
             </MobileNavLink>
             <MobileNavLink to="/contact" active={isActive('/contact')} onClick={() => setMobileMenuOpen(false)}>
-              Contact
+              Επικοινωνία
             </MobileNavLink>
             <Button className="mt-2 bg-wood hover:bg-wood-dark">
-              Get a Quote
+              Ζητήστε Προσφορά
             </Button>
           </div>
         </div>

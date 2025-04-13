@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4">Wooden Wonder Gardens</h3>
+            <h3 className="text-xl font-serif font-semibold mb-4">ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ</h3>
             <p className="text-earth-light mb-6">
-              Crafting beautiful wooden garden structures and spaces since 1995.
+              Δημιουργούμε όμορφες ξύλινες κατασκευές κήπου από το 1995.
             </p>
             <div className="flex space-x-4">
               <SocialIcon icon={<Facebook size={20} />} href="https://facebook.com" />
@@ -23,26 +23,26 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-serif font-semibold mb-4">Γρήγοροι Σύνδεσμοι</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-earth-light hover:text-white transition-colors">
-                  Home
+                  Αρχική
                 </Link>
               </li>
               <li>
                 <Link to="/portfolio" className="text-earth-light hover:text-white transition-colors">
-                  Our Work
+                  Έργα μας
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-earth-light hover:text-white transition-colors">
-                  About Us
+                  Σχετικά με εμάς
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-earth-light hover:text-white transition-colors">
-                  Contact
+                  Επικοινωνία
                 </Link>
               </li>
             </ul>
@@ -50,38 +50,38 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4">Our Services</h3>
+            <h3 className="text-xl font-serif font-semibold mb-4">Υπηρεσίες</h3>
             <ul className="space-y-3">
-              <li className="text-earth-light">Wooden Pergolas</li>
-              <li className="text-earth-light">Garden Structures</li>
-              <li className="text-earth-light">Wooden Decking</li>
-              <li className="text-earth-light">Custom Garden Features</li>
-              <li className="text-earth-light">Landscaping Design</li>
+              <li className="text-earth-light">Ξύλινες Πέργκολες</li>
+              <li className="text-earth-light">Κατασκευές Κήπου</li>
+              <li className="text-earth-light">Ξύλινα Δάπεδα</li>
+              <li className="text-earth-light">Ειδικές Κατασκευές</li>
+              <li className="text-earth-light">Σχεδιασμός Τοπίου</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-serif font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-serif font-semibold mb-4">Επικοινωνία</h3>
             <address className="not-italic">
               <div className="flex items-start space-x-3 mb-3">
                 <MapPin size={20} className="text-wood-light mt-1 flex-shrink-0" />
-                <span className="text-earth-light">123 Garden Lane, Woodville, WV 54321</span>
+                <span className="text-earth-light">ΛΕΩΦ. ΦΛΕΜΙΝΓΚ 54, ΡΑΦΗΝΑ</span>
               </div>
               <div className="flex items-center space-x-3 mb-3">
                 <Phone size={20} className="text-wood-light flex-shrink-0" />
-                <span className="text-earth-light">(555) 123-4567</span>
+                <span className="text-earth-light">ΤΗΛ: 22940 78371, ΚΙΝ: 697-774-2882</span>
               </div>
               <div className="flex items-center space-x-3 mb-3">
                 <Mail size={20} className="text-wood-light flex-shrink-0" />
-                <span className="text-earth-light">info@woodenwondergardens.com</span>
+                <span className="text-earth-light">info@wooden-creations.gr</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-wood-light mt-1 flex-shrink-0" />
                 <div className="text-earth-light">
-                  <p>Monday-Friday: 8am - 6pm</p>
-                  <p>Saturday: 9am - 4pm</p>
-                  <p>Sunday: Closed</p>
+                  <p>Δευτέρα-Παρασκευή: 9πμ - 7μμ</p>
+                  <p>Σάββατο: 9πμ - 3μμ</p>
+                  <p>Κυριακή: Κλειστά</p>
                 </div>
               </div>
             </address>
@@ -91,7 +91,7 @@ const Footer = () => {
         <hr className="border-earth-light/20 my-8" />
 
         <div className="text-center text-earth-light text-sm">
-          <p>&copy; {new Date().getFullYear()} Wooden Wonder Gardens. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ΜΠΡΟΥΜΑΣ ΑΝΔΡΕΑΣ. Με επιφύλαξη παντός δικαιώματος.</p>
         </div>
       </div>
     </footer>
