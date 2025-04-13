@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HeroBanner from '@/components/HeroBanner';
 import SectionTitle from '@/components/SectionTitle';
@@ -8,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import Map from '@/components/Map';
+import CustomerReviews from '@/components/CustomerReviews';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -213,7 +213,7 @@ const Contact = () => {
             />
             <FaqItem 
               question="Ποια είναι η εγγύηση για τις κατασκευές σας;"
-              answer="Προσφέρουμε 5ετή εγγύηση για την εργασία και τη δομική ακεραιότητα για όλες τις κατασκευές του κήπου μας. Συγκεκριμένα υλικά ξύλου μπορεί να έχουν πρόσθετες εγγυήσεις κατασκευαστή."
+              answer="Προσφέρουμε 5ετή εγγύηση για την εργασία και τη δομική ακεραιότητα για όλες τις κατασκευές του κήπου μας. Συγκεκριμένα υλικά ξύλου μπορεί να έχουν πρόσθετες εγγύησεις κατασκευαστή."
             />
           </div>
         </div>
