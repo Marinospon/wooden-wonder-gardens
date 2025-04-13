@@ -1,11 +1,10 @@
-
 import React from 'react';
 import HeroBanner from '@/components/HeroBanner';
 import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ProjectCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Leaf, Tool, Users } from 'lucide-react';
+import { ArrowRight, Award, Leaf, Hammer, Users } from 'lucide-react';
 
 const Index = () => {
   // Sample featured projects
@@ -91,7 +90,7 @@ const Index = () => {
               description="Custom designed pergolas in various styles to create the perfect outdoor living space."
             />
             <ServiceCard 
-              icon={<Tool className="h-10 w-10 text-garden" />}
+              icon={<Hammer className="h-10 w-10 text-garden" />}
               title="Garden Structures" 
               description="Gazebos, arbors, trellises, and more – expertly crafted to enhance your garden."
             />
