@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom wood-themed colors
+				wood: {
+					light: '#E6CCB2',
+					DEFAULT: '#B68C59',
+					dark: '#7D5A2C',
+				},
+				garden: {
+					light: '#A8C090',
+					DEFAULT: '#5A7D3A',
+					dark: '#3A5924',
+				},
+				earth: {
+					light: '#D6C6AC',
+					DEFAULT: '#9C8B6A',
+					dark: '#5F5541',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +105,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-up': 'fade-up 0.5s ease-out'
+			},
+			backgroundImage: {
+				'wood-texture': "url('/wood-texture.jpg')",
+				'garden-hero': "url('/garden-hero.jpg')",
 			}
 		}
 	},
