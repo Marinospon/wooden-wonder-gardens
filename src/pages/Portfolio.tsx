@@ -5,7 +5,7 @@ import SectionTitle from '@/components/SectionTitle';
 import CategoryCard from '@/components/CategoryCard';
 import { Button } from '@/components/ui/button';
 
-// Updated categories with the real images from the business
+// Updated categories with better images
 const categories = [
   {
     id: 'parking',
@@ -23,13 +23,13 @@ const categories = [
     id: 'flower-pots',
     title: 'ΚΑΦΑΣΩΤΑ',
     count: 26,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png'
   },
   {
     id: 'wooden-decks',
     title: 'ΞΥΛΙΝΑ ΠΑΤΩΜΑΤΑ',
     count: 15,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/85c0b3c5-da97-4b4d-93f9-22dc5e26c23f.png'
   },
   {
     id: 'fences',
@@ -41,31 +41,31 @@ const categories = [
     id: 'dog-houses',
     title: 'ΣΠΙΤΑΚΙΑ ΣΚΥΛΩΝ',
     count: 27,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/3ec28629-0c84-4601-80c5-8fa8270069e5.png'
   },
   {
     id: 'garden-houses',
     title: 'ΣΠΙΤΑΚΙΑ ΚΗΠΟΥ',
     count: 14,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/3ec28629-0c84-4601-80c5-8fa8270069e5.png'
   },
   {
     id: 'children-houses',
     title: 'ΠΑΙΔΙΚΑ ΣΠΙΤΑΚΙΑ',
     count: 21,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/3ec28629-0c84-4601-80c5-8fa8270069e5.png'
   },
   {
     id: 'seating',
     title: 'ΚΑΘΙΣΤΙΚΑ',
     count: 16,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png'
   },
   {
     id: 'kiosks',
     title: 'ΚΙΟΣΚΙΑ',
     count: 5,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png'
   },
   {
     id: 'doors',
@@ -77,7 +77,7 @@ const categories = [
     id: 'roofing',
     title: 'ΣΚΕΠΑΣΗ',
     count: 21,
-    imageUrl: '/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png'
+    imageUrl: '/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png'
   },
   {
     id: 'pergolas',

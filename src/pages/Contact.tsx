@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import Map from '@/components/Map';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -27,7 +28,7 @@ const Contact = () => {
       <HeroBanner
         title="Επικοινωνία"
         subtitle="Επικοινωνήστε μαζί μας για να συζητήσουμε το έργο κήπου σας."
-        imageUrl="/garden-hero.jpg"
+        imageUrl="/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png"
       />
       
       {/* Contact Section */}
@@ -166,15 +167,25 @@ const Contact = () => {
               
               {/* Map */}
               <div className="mt-12">
-                <div className="w-full h-80 bg-muted rounded-lg overflow-hidden">
-                  <img 
-                    src="/wood-texture.jpg"
-                    alt="Map location" 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-full h-80 rounded-lg overflow-hidden shadow-md">
+                  <Map />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Customer Reviews Section */}
+      <section className="py-24 bg-earth-light/20">
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            title="Αξιολογήσεις Πελατών" 
+            subtitle="Διαβάστε τι λένε οι πελάτες μας για τις ξύλινες κατασκευές και την εξυπηρέτησή μας."
+          />
+          
+          <div className="mt-12">
+            <CustomerReviews />
           </div>
         </div>
       </section>

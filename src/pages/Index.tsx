@@ -6,9 +6,10 @@ import ProjectCard from '@/components/ProjectCard';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Leaf, Hammer, Users, Home } from 'lucide-react';
+import CustomerReviews from '@/components/CustomerReviews';
 
 const Index = () => {
-  // Sample featured projects using the uploaded images
+  // Updated featured projects with better images
   const featuredProjects = [
     {
       id: 'wooden-pergola',
@@ -89,31 +90,37 @@ const Index = () => {
               icon={<Leaf className="h-10 w-10 text-garden" />}
               title="Ξύλινες Πέργκολες" 
               description="Πέργκολες προσαρμοσμένες σε διάφορα στυλ για να δημιουργήσουν τον τέλειο εξωτερικό χώρο διαβίωσης."
+              imageUrl="/lovable-uploads/19552736-2f7d-4f83-a4f5-66dd47fe7a7a.png"
             />
             <ServiceCard 
               icon={<Hammer className="h-10 w-10 text-garden" />}
               title="Κατασκευές Κήπου" 
               description="Κιόσκια, διακοσμητικά, πέργκολες και περισσότερα – σχεδιασμένα για να αναδείξουν τον κήπο σας."
+              imageUrl="/lovable-uploads/785321cc-1ec1-4164-b810-0a7e4728e20c.png"
             />
             <ServiceCard 
               icon={<Award className="h-10 w-10 text-garden" />}
               title="Ειδικές Κατασκευές" 
               description="Μοναδικά ξύλινα στοιχεία συμπεριλαμβανομένων γεφυρών, ζαρντινιέρων και διακοσμητικών στοιχείων."
+              imageUrl="/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png"
             />
             <ServiceCard 
               icon={<Home className="h-10 w-10 text-garden" />}
               title="Παιδικά Σπιτάκια" 
               description="Ξύλινα σπιτάκια και δεντρόσπιτα για να στεγάσουν τα πρώτα όνειρα των παιδιών σας."
+              imageUrl="/lovable-uploads/3ec28629-0c84-4601-80c5-8fa8270069e5.png"
             />
             <ServiceCard 
               icon={<Users className="h-10 w-10 text-garden" />}
               title="Έπιπλα Κήπου" 
               description="Καθιστικά, τραπέζια, παγκάκια και άλλα έπιπλα κήπου προσαρμοσμένα στις ανάγκες σας."
+              imageUrl="/lovable-uploads/673639f2-44a8-4359-8d6a-b12580883e41.png"
             />
             <ServiceCard 
               icon={<Hammer className="h-10 w-10 text-garden" />}
               title="Ξύλινα Δάπεδα" 
               description="Δάπεδα εξωτερικού χώρου υψηλής ποιότητας και αντοχής για κήπους, βεράντες και πισίνες."
+              imageUrl="/lovable-uploads/85c0b3c5-da97-4b4d-93f9-22dc5e26c23f.png"
             />
           </div>
         </div>
@@ -147,7 +154,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* Reviews Section */}
       <section className="py-24 bg-garden-dark text-white">
         <div className="container mx-auto px-4">
           <SectionTitle 
@@ -157,22 +164,8 @@ const Index = () => {
             subtitleClassName="text-white/80"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TestimonialCard 
-              quote="Η πέργκολα που κατασκεύασαν έχει μετατρέψει εντελώς τον κήπο μας σε έναν όμορφο υπαίθριο χώρο διαβίωσης. Εξαιρετική τεχνογνωσία!"
-              author="Μαρία Παπαδοπούλου"
-              position="Ιδιοκτήτρια Κατοικίας"
-            />
-            <TestimonialCard 
-              quote="Η προσοχή τους στη λεπτομέρεια και η ποιότητα εργασίας είναι εξαιρετική. Το γεφυράκι κήπου που δημιούργησαν είναι το επίκεντρο του κήπου μας."
-              author="Γιώργος Αντωνίου"
-              position="Αρχιτέκτονας Τοπίου"
-            />
-            <TestimonialCard 
-              quote="Επαγγελματίες, δημιουργικοί και ευχάριστοι στη συνεργασία. Άκουσαν τις ιδέες μας και δημιούργησαν ακριβώς αυτό που οραματιστήκαμε."
-              author="Ελένη Δημητρίου"
-              position="Κατασκευαστής Ακινήτων"
-            />
+          <div className="mt-12">
+            <CustomerReviews />
           </div>
         </div>
       </section>
@@ -198,28 +191,16 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  imageUrl: string;
 }
 
-const ServiceCard = ({ icon, title, description }: ServiceCardProps) => (
-  <div className="bg-white p-8 rounded-lg shadow-md hover-grow transition-all">
+const ServiceCard = ({ icon, title, description, imageUrl }: ServiceCardProps) => (
+  <div className="bg-white p-8 rounded-lg shadow-md hover-grow transition-all overflow-hidden">
     <div className="mb-6">{icon}</div>
     <h3 className="text-xl font-serif font-semibold mb-4">{title}</h3>
-    <p className="text-muted-foreground">{description}</p>
-  </div>
-);
-
-interface TestimonialCardProps {
-  quote: string;
-  author: string;
-  position: string;
-}
-
-const TestimonialCard = ({ quote, author, position }: TestimonialCardProps) => (
-  <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
-    <p className="text-lg italic mb-6">&ldquo;{quote}&rdquo;</p>
-    <div>
-      <h4 className="font-semibold text-wood-light">{author}</h4>
-      <p className="text-sm text-white/70">{position}</p>
+    <p className="text-muted-foreground mb-6">{description}</p>
+    <div className="h-48 w-full overflow-hidden rounded-md -mx-2 -mb-4 mt-4">
+      <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
     </div>
   </div>
 );
